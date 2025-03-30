@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
+{% block title %}Главная{% endblock %}
+
 {% block content %}
-    <h1>Кликер!</h1>
-    <p>Количество кликов - {{ current_user.clicks }}</p>
-    <a href="{{url_for('click') }}">Кнопка</a>
+    <div class="text-center">
+        <h1 class="mb-4">Кликер!</h1>
+        <p class="fs-4">Количество кликов: <strong>{{ current_user.clicks }}</strong></p>
+        <a href="{{ url_for('click') }}" class="btn btn-lg btn-success mt-3">Кликни!</a>
+    </div>
 {% endblock %}
